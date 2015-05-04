@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnitListViewController: UIViewController, UITableViewDelegate, //UITableViewDataSource 
+class UnitListViewController: UIViewController, UITableViewDelegate //UITableViewDataSource
 {
 
     @IBOutlet weak var unitListTableView: UITableView!
