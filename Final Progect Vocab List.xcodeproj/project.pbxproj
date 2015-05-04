@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5AB8701AF3C68F004FF0D2 /* UnitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AB86F1AF3C68F004FF0D2 /* UnitListViewController.swift */; };
 		3FA7241B1AEFD775000D0CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7241A1AEFD775000D0CF0 /* AppDelegate.swift */; };
 		3FA7241D1AEFD775000D0CF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7241C1AEFD775000D0CF0 /* ViewController.swift */; };
 		3FA724201AEFD775000D0CF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA7241E1AEFD775000D0CF0 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5AB86F1AF3C68F004FF0D2 /* UnitListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitListViewController.swift; sourceTree = "<group>"; };
 		3FA724151AEFD775000D0CF0 /* Final Progect Vocab List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final Progect Vocab List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA724191AEFD775000D0CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA7241A1AEFD775000D0CF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				3FA7241A1AEFD775000D0CF0 /* AppDelegate.swift */,
 				3FA7241C1AEFD775000D0CF0 /* ViewController.swift */,
 				3FA7241E1AEFD775000D0CF0 /* Main.storyboard */,
+				3F5AB86F1AF3C68F004FF0D2 /* UnitListViewController.swift */,
 				3FA724211AEFD775000D0CF0 /* Images.xcassets */,
 				3FA724231AEFD775000D0CF0 /* LaunchScreen.xib */,
 				3FA724181AEFD775000D0CF0 /* Supporting Files */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA7241D1AEFD775000D0CF0 /* ViewController.swift in Sources */,
+				3F5AB8701AF3C68F004FF0D2 /* UnitListViewController.swift in Sources */,
 				3FA7241B1AEFD775000D0CF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				3FA724361AEFD775000D0CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FA724371AEFD775000D0CF0 /* Build configuration list for PBXNativeTarget "Final Progect Vocab ListTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				3FA724391AEFD775000D0CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
