@@ -19,7 +19,7 @@ class UnitListViewController: UIViewController, UITableViewDelegate //UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as/*!*/ UITableViewCell
         cell.textLabel?.text = "hiehfsi"
         return cell
     }
