@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnitListViewController: UIViewController, UITableViewDelegate //UITableViewDataSource
+class UnitListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
 
     @IBOutlet weak var unitListTableView: UITableView!
@@ -18,8 +18,13 @@ class UnitListViewController: UIViewController, UITableViewDelegate //UITableVie
 
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as/*!*/ UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel?.text = "hiehfsi"
         return cell
     }
