@@ -69,12 +69,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="284"/>
+            <point key="canvasLocation" x="877.5" y="283.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Vocab List View Controller-->
         <scene sceneID="V10-Sa-xRX">
             <objects>
-                <viewController id="YAA-ZK-8Oz" sceneMemberID="viewController">
+                <viewController id="YAA-ZK-8Oz" customClass="VocabListViewController" customModule="Final_Progect_Vocab_List" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hWA-HX-3hL"/>
                         <viewControllerLayoutGuide type="bottom" id="bdv-80-LgE"/>
@@ -82,13 +82,48 @@
                     <view key="view" contentMode="scaleToFill" id="eVA-3c-aZt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9br-TQ-rFx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell2" id="BNc-xR-IwP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BNc-xR-IwP" id="R2J-ik-l82">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="YAA-ZK-8Oz" id="23Q-kI-J0G"/>
+                                    <outlet property="delegate" destination="YAA-ZK-8Oz" id="pj2-vx-nhO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BwW-za-q8g">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="uBh-xS-qWh">
+                            <connections>
+                                <action selector="editOnTappedButton:" destination="YAA-ZK-8Oz" id="DJ0-iz-9Da"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NzW-bD-hFd">
+                            <connections>
+                                <action selector="plusOnTappedButton:" destination="YAA-ZK-8Oz" id="DfP-Zx-6Xg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="editButton" destination="uBh-xS-qWh" id="t44-5Y-4SZ"/>
+                        <outlet property="vocabTableView" destination="9br-TQ-rFx" id="40d-Tx-LoC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Kv-aU-Zft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1723.5" y="283.5"/>
+            <point key="canvasLocation" x="2140.5" y="283.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fjn-nY-zJN">
@@ -108,6 +143,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVm-zc-a9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="406" y="284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tjv-Y2-MkI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EIP-Ih-e2d" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JAw-CB-8Kt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YAA-ZK-8Oz" kind="relationship" relationship="rootViewController" id="b0R-4O-Uhb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2MJ-jq-hpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654.5" y="283.5"/>
         </scene>
     </scenes>
 </document>

@@ -24,6 +24,11 @@ class UnitListViewController: UIViewController, UITableViewDataSource, UITableVi
         return units.count
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
         cell.textLabel?.text = units[indexPath.row]
