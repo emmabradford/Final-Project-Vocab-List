@@ -11,13 +11,14 @@ import UIKit
 class VocabListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var vocabTableView: UITableView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     //hope this works
     
     var vocabWords : [String] = ["lalalalalala"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        editButton.tag = 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,9 +32,43 @@ class VocabListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     @IBAction func editOnTappedButton(sender: UIBarButtonItem) {
+        if sender.tag == 0 {
+            vocabTableView.editing = true
+            sender.tag = 1
+        } else {
+            vocabTableView.editing = false
+            sender.tag = 0
+        }
     }
    
     @IBAction func plusOnTappedButton(sender: UIBarButtonItem) {
+        var alert = UIAlertController(title: "add Vocabulary Word", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "add word here"
+        }
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(cancelAction)
+        var addAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.Default) { (action) -> Void in
+            var vocabTextField = alert.textFields?[0] as! UITextField
+            self.vocabWords.append(vocabTextField.text)
+            self.vocabTableView.reloadData()
+        }
+        alert.addAction(addAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
-
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            vocabWords.removeAtIndex(indexPath.row)
+            vocabTableView.reloadData()
+        }
+    }
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        var vocabList = vocabWords[sourceIndexPath.row]
+        vocabWords.removeAtIndex(sourceIndexPath.row)
+        vocabWords.insert(vocabList, atIndex: destinationIndexPath.row)
+    }
 }

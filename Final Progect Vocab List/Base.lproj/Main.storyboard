@@ -117,6 +117,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="editButton" destination="uBh-xS-qWh" id="t44-5Y-4SZ"/>
                         <outlet property="vocabTableView" destination="9br-TQ-rFx" id="40d-Tx-LoC"/>
                     </connections>
                 </viewController>
