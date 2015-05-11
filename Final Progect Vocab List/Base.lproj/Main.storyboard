@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jIv-WE-WSs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Unit List View Controller-->
@@ -16,9 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r2e-A7-5K3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="r2e-A7-5K3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="BSg-Fv-5Q4"/>
+                                    <constraint firstAttribute="width" constant="375" id="PTX-F3-6Eh"/>
+                                </constraints>
                                 <tableView key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Bua-Tb-haz">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -49,6 +54,14 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r2e-A7-5K3" secondAttribute="bottom" id="E9j-hO-gst"/>
+                            <constraint firstItem="r2e-A7-5K3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="OnX-Qz-4pi"/>
+                            <constraint firstItem="r2e-A7-5K3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="fJg-4X-3rZ"/>
+                            <constraint firstAttribute="centerY" secondItem="r2e-A7-5K3" secondAttribute="centerY" id="gVk-RC-H5J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r2e-A7-5K3" secondAttribute="trailing" constant="-16" id="mZI-eM-zgO"/>
+                            <constraint firstAttribute="centerX" secondItem="r2e-A7-5K3" secondAttribute="centerX" id="xaM-Ng-eq1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZgP-R1-hal">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="2OH-5K-1Tn">
@@ -83,9 +96,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9br-TQ-rFx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9br-TQ-rFx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="2B9-Hp-DEW"/>
+                                    <constraint firstAttribute="height" constant="667" id="gUT-L9-SaP"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell2" id="BNc-xR-IwP">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -102,6 +119,14 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bdv-80-LgE" firstAttribute="top" secondItem="9br-TQ-rFx" secondAttribute="bottom" id="4lD-MG-WQJ"/>
+                            <constraint firstItem="9br-TQ-rFx" firstAttribute="top" secondItem="eVA-3c-aZt" secondAttribute="topMargin" id="5VK-k7-0Vl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9br-TQ-rFx" secondAttribute="trailing" constant="-16" id="GgP-e7-Saj"/>
+                            <constraint firstAttribute="centerY" secondItem="9br-TQ-rFx" secondAttribute="centerY" id="Nxf-mm-ueZ"/>
+                            <constraint firstItem="9br-TQ-rFx" firstAttribute="leading" secondItem="eVA-3c-aZt" secondAttribute="leadingMargin" constant="-16" id="bQt-TA-yjb"/>
+                            <constraint firstAttribute="centerX" secondItem="9br-TQ-rFx" secondAttribute="centerX" id="jOW-9B-MR9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BwW-za-q8g">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="uBh-xS-qWh">
