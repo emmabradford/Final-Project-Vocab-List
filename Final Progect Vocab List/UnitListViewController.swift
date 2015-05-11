@@ -13,9 +13,15 @@ class UnitListViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var unitListTableView: UITableView!
     
+    var units = ["Unit 1", "Unit 2", "Unit 3"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return units.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,9 +31,12 @@ class UnitListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = "hiehfsi"
+        cell.textLabel?.text = units[indexPath.row]
         return cell
     }
+    
+
+  
     
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
     }
