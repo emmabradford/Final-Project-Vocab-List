@@ -27,6 +27,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2cm-Kh-9t3" id="2WT-DT-XHf">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="YAA-ZK-8Oz" kind="show" id="hqr-D0-eIR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -84,6 +87,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BNc-xR-IwP" id="R2J-ik-l82">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="78w-QP-yJY" kind="presentation" modalTransitionStyle="flipHorizontal" id="2rq-Aw-WfL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -124,6 +130,61 @@
             </objects>
             <point key="canvasLocation" x="2140.5" y="283.5"/>
         </scene>
+        <!--Vocab Detail View Controller-->
+        <scene sceneID="Bnt-Tf-gy4">
+            <objects>
+                <viewController id="78w-QP-yJY" customClass="VocabDetailViewController" customModule="Final_Progect_Vocab_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MUS-k0-MCW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rxk-fE-S02"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ycg-ud-I9T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="deffinition" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73A-tK-mJ4">
+                                <rect key="frame" x="139" y="211" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="the word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-bp-MYF">
+                                <rect key="frame" x="152" y="144" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXT-G1-O67">
+                                <rect key="frame" x="73" y="357" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mZ-yM-ZQ9">
+                                <rect key="frame" x="155" y="173" width="64" height="30"/>
+                                <state key="normal" title="website">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onWedsiteTappedButton:" destination="78w-QP-yJY" eventType="touchUpInside" id="xdv-Cj-0zD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="notes" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9S-Nf-lJ1">
+                                <rect key="frame" x="139" y="276" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RhL-Ob-Sdn"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="vocabWordDeffinitionTextField" destination="73A-tK-mJ4" id="G3I-1m-UJT"/>
+                        <outlet property="vocabWordLabel" destination="uf0-bp-MYF" id="AfN-be-RLi"/>
+                        <outlet property="vocabWordNotesTextField" destination="H9S-Nf-lJ1" id="T9d-eg-pUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0L-Vt-AVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973.5" y="283.5"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fjn-nY-zJN">
             <objects>
@@ -163,4 +224,7 @@
             <point key="canvasLocation" x="1654.5" y="283.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hqr-D0-eIR"/>
+    </inferredMetricsTieBreakers>
 </document>
