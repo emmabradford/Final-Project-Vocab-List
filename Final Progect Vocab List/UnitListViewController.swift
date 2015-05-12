@@ -24,10 +24,7 @@ class UnitListViewController: UIViewController, UITableViewDelegate, UITableView
         return units.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
@@ -43,6 +40,9 @@ class UnitListViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func onTappedEditButton(sender: UIBarButtonItem) {
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var vlvc = segue.destinationViewController as! VocabListViewController
+        var index = unitListTableView.indexPathsForSelectedRows()
+    }
 
 }

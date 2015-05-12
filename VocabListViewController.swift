@@ -71,4 +71,7 @@ class VocabListViewController: UIViewController, UITableViewDataSource, UITableV
         vocabWords.removeAtIndex(sourceIndexPath.row)
         vocabWords.insert(vocabList, atIndex: destinationIndexPath.row)
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //var
+    }
 }
