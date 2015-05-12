@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnitListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class UnitListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
 
     @IBOutlet weak var unitListTableView: UITableView!
@@ -17,13 +17,12 @@ class UnitListViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        editButtonItem().tag = 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return units.count
     }
-    
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -32,13 +31,38 @@ class UnitListViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            units.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+    }
 
-  
-    
     @IBAction func onTappedPlusButton(sender: UIBarButtonItem) {
+        var alert = UIAlertController(title: "Add Unit", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Add Unit Here"
+        }
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        alert.addAction(cancelAction)
+        var addAction = UIAlertAction(title: "Add", style: UIAlertActionStyle.Default) { (action) -> Void in
+            var unitTextField = alert.textFields?[0] as! UITextField
+            self.units.append(unitTextField.text)
+            self.unitListTableView.reloadData()
+        }
+        alert.addAction(addAction)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     @IBAction func onTappedEditButton(sender: UIBarButtonItem) {
+        if sender.tag == 0 {
+            unitListTableView.editing = true
+            sender.tag = 1
+        }
+        else {
+            unitListTableView.editing = false
+            sender.tag = 0
+        }
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var vlvc = segue.destinationViewController as! VocabListViewController
