@@ -150,7 +150,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="the word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-bp-MYF">
                                 <rect key="frame" x="152" y="144" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXT-G1-O67">
@@ -163,6 +163,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onWedsiteTappedButton:" destination="78w-QP-yJY" eventType="touchUpInside" id="xdv-Cj-0zD"/>
+                                    <segue destination="KYb-Qu-NC4" kind="presentation" id="AN6-1k-GgZ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="notes" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9S-Nf-lJ1">
@@ -170,12 +171,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIo-yX-2uZ">
+                                <rect key="frame" x="170" y="314" width="46" height="30"/>
+                                <state key="normal" title="save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSavedButtonTapped:" destination="78w-QP-yJY" eventType="touchUpInside" id="dke-2t-mQ9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="RhL-Ob-Sdn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="vocabImageView" destination="wXT-G1-O67" id="BBw-Gs-36n"/>
                         <outlet property="vocabWordDeffinitionTextField" destination="73A-tK-mJ4" id="G3I-1m-UJT"/>
                         <outlet property="vocabWordLabel" destination="uf0-bp-MYF" id="AfN-be-RLi"/>
                         <outlet property="vocabWordNotesTextField" destination="H9S-Nf-lJ1" id="T9d-eg-pUZ"/>
@@ -184,6 +195,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0L-Vt-AVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2973.5" y="283.5"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Zds-TL-CgY">
+            <objects>
+                <viewController id="KYb-Qu-NC4" customClass="WebViewController" customModule="Final_Progect_Vocab_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qQH-1Z-pnk"/>
+                        <viewControllerLayoutGuide type="bottom" id="2ja-Qt-vJI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kUa-Fw-WLj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-V7-qg1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNE-1C-69g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3650" y="235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fjn-nY-zJN">

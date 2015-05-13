@@ -13,12 +13,18 @@ class VocabDetailViewController: UIViewController {
     @IBOutlet weak var vocabWordLabel: UILabel!
     @IBOutlet weak var vocabWordDeffinitionTextField: UITextField!
     @IBOutlet weak var vocabWordNotesTextField: UITextField!
+    @IBOutlet weak var vocabImageView: UIImageView!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     @IBAction func onWedsiteTappedButton(sender: UIButton) {
+    }
+    @IBAction func onSavedButtonTapped(sender: UIButton) {
     }
 
 }
