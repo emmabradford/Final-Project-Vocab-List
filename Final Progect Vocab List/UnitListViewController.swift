@@ -23,8 +23,12 @@ class UnitListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return units.count
     }
+<<<<<<< HEAD
 
 
+=======
+    
+>>>>>>> fbe03e980edd19f317f931ca3b78b98b65a3f5e5
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
@@ -65,6 +69,9 @@ class UnitListViewController: UIViewController, UITableViewDataSource, UITableVi
             sender.tag = 0
         }
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var vlvc = segue.destinationViewController as! VocabListViewController
+        var index = unitListTableView.indexPathsForSelectedRows()
+    }
 
 }
