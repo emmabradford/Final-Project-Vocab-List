@@ -23,7 +23,7 @@ class UnitListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return units.count
     }
-    
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell

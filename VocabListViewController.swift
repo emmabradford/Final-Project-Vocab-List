@@ -12,6 +12,7 @@ class VocabListViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var vocabTableView: UITableView!
     @IBOutlet weak var editButton: UIBarButtonItem!
+    //var word = vocabTextField.text
     //hope this works
     
     var vocabWords : [String] = ["lalalalalala"]
@@ -74,6 +75,7 @@ class VocabListViewController: UIViewController, UITableViewDataSource, UITableV
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var vdvc = segue.destinationViewController as! VocabDetailViewController
         var index = vocabTableView.indexPathsForSelectedRows()
+        //vdvc.vocabWordLabel = vocabTextField.text
         
     }
 }

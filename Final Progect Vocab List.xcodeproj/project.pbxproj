@@ -16,6 +16,7 @@
 		3FA724251AEFD775000D0CF0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA724231AEFD775000D0CF0 /* LaunchScreen.xib */; };
 		3FA724311AEFD775000D0CF0 /* Final_Progect_Vocab_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA724301AEFD775000D0CF0 /* Final_Progect_Vocab_ListTests.swift */; };
 		3FB399E01AF91021003C74D0 /* VocabListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB399DF1AF91021003C74D0 /* VocabListViewController.swift */; };
+		3FDEBDAA1B03950E00E7D3BD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEBDA91B03950E00E7D3BD /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		3FA7242F1AEFD775000D0CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA724301AEFD775000D0CF0 /* Final_Progect_Vocab_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Progect_Vocab_ListTests.swift; sourceTree = "<group>"; };
 		3FB399DF1AF91021003C74D0 /* VocabListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabListViewController.swift; sourceTree = SOURCE_ROOT; };
+		3FDEBDA91B03950E00E7D3BD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				3FA7241C1AEFD775000D0CF0 /* ViewController.swift */,
 				3FA7241E1AEFD775000D0CF0 /* Main.storyboard */,
 				3F68AD661B0248BC00877D04 /* VocabDetailViewController.swift */,
+				3FDEBDA91B03950E00E7D3BD /* WebViewController.swift */,
 				3FB399DF1AF91021003C74D0 /* VocabListViewController.swift */,
 				3F5AB86F1AF3C68F004FF0D2 /* UnitListViewController.swift */,
 				3FA724211AEFD775000D0CF0 /* Images.xcassets */,
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA7241D1AEFD775000D0CF0 /* ViewController.swift in Sources */,
+				3FDEBDAA1B03950E00E7D3BD /* WebViewController.swift in Sources */,
 				3F68AD671B0248BC00877D04 /* VocabDetailViewController.swift in Sources */,
 				3F5AB8701AF3C68F004FF0D2 /* UnitListViewController.swift in Sources */,
 				3FB399E01AF91021003C74D0 /* VocabListViewController.swift in Sources */,
