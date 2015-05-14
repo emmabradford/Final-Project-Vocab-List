@@ -10,6 +10,7 @@ import UIKit
 
 class WebViewController: UIViewController {
 
+    @IBOutlet weak var vocabDeffinitionWedView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

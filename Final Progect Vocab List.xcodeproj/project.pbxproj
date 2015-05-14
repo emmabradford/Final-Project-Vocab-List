@@ -17,6 +17,7 @@
 		3FA724311AEFD775000D0CF0 /* Final_Progect_Vocab_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA724301AEFD775000D0CF0 /* Final_Progect_Vocab_ListTests.swift */; };
 		3FB399E01AF91021003C74D0 /* VocabListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB399DF1AF91021003C74D0 /* VocabListViewController.swift */; };
 		3FDEBDAA1B03950E00E7D3BD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEBDA91B03950E00E7D3BD /* WebViewController.swift */; };
+		3FDEBDAC1B03984600E7D3BD /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FDEBDAB1B03984600E7D3BD /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		3FA724301AEFD775000D0CF0 /* Final_Progect_Vocab_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Progect_Vocab_ListTests.swift; sourceTree = "<group>"; };
 		3FB399DF1AF91021003C74D0 /* VocabListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabListViewController.swift; sourceTree = SOURCE_ROOT; };
 		3FDEBDA91B03950E00E7D3BD /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		3FDEBDAB1B03984600E7D3BD /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default.png; path = ../../../default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				3FB399DF1AF91021003C74D0 /* VocabListViewController.swift */,
 				3F5AB86F1AF3C68F004FF0D2 /* UnitListViewController.swift */,
 				3FA724211AEFD775000D0CF0 /* Images.xcassets */,
+				3FDEBDAB1B03984600E7D3BD /* default.png */,
 				3FA724231AEFD775000D0CF0 /* LaunchScreen.xib */,
 				3FA724181AEFD775000D0CF0 /* Supporting Files */,
 			);
@@ -206,6 +209,7 @@
 			files = (
 				3FA724201AEFD775000D0CF0 /* Main.storyboard in Resources */,
 				3FA724251AEFD775000D0CF0 /* LaunchScreen.xib in Resources */,
+				3FDEBDAC1B03984600E7D3BD /* default.png in Resources */,
 				3FA724221AEFD775000D0CF0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
