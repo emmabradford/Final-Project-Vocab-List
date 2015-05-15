@@ -19,18 +19,20 @@ class VocabDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         vocabImageView.image = image
+        
         super.viewDidLoad()
     }
     @IBAction func onWedsiteTappedButton(sender: UIButton) {
+        
     }
     @IBAction func onSavedButtonTapped(sender: UIButton) {
     }
     @IBAction func onLibraryButtonTapped(sender: UIButton) {
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
+        vocabImageView.image = self.image
     }
     
- //   func imagePickerController(
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: {
