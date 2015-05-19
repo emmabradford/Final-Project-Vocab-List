@@ -41,7 +41,6 @@ class VocabDetailViewController: UIViewController {
         vocabImageView.image = self.image
     }
     
-    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: {
             var selectedImage = info [UIImagePickerControllerOriginalImage] as! UIImage
