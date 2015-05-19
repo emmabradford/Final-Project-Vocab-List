@@ -9,14 +9,20 @@
 import UIKit
 
 class WebViewController: UIViewController {
-
+    var website = ""
     @IBOutlet weak var vocabDeffinitionWedView: UIWebView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let googleURL = NSURL(string: "\(website)")
+        let myRequest = NSURLRequest(URL: googleURL!)
+        vocabDeffinitionWedView.loadRequest(myRequest)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
- 
+    
 
 }
