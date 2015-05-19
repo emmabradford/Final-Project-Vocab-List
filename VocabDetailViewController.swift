@@ -16,20 +16,35 @@ class VocabDetailViewController: UIViewController {
     @IBOutlet weak var vocabImageView: UIImageView!
     let imagePicker = UIImagePickerController()
     var image = UIImage(named: "default")
+    var word = ""
+    var wordDefinition = ""
+    var notes = ""
+    
     
     override func viewDidLoad() {
         vocabImageView.image = image
+        vocabWordDeffinitionTextField.text = wordDefinition
+        vocabWordNotesTextField.text = notes
         super.viewDidLoad()
     }
     @IBAction func onWedsiteTappedButton(sender: UIButton) {
     }
     @IBAction func onSavedButtonTapped(sender: UIButton) {
+        image = vocabImageView.image
+        wordDefinition = vocabWordDeffinitionTextField.text
+        notes = vocabWordNotesTextField.text
+        
     }
     @IBAction func onLibraryButtonTapped(sender: UIButton) {
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
+        vocabImageView.image = self.image
     }
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 0db5845810e332b309737534c336cb34d56704e4
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: {
             var selectedImage = info [UIImagePickerControllerOriginalImage] as! UIImage
