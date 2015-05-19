@@ -87,6 +87,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BNc-xR-IwP" id="R2J-ik-l82">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="78w-QP-yJY" kind="presentation" id="or1-HP-y2S"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -144,12 +147,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="the word" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-bp-MYF">
-                                <rect key="frame" x="152" y="144" width="70" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXT-G1-O67">
                                 <rect key="frame" x="73" y="357" width="240" height="128"/>
                             </imageView>
@@ -160,6 +157,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onWedsiteTappedButton:" destination="78w-QP-yJY" eventType="touchUpInside" id="xdv-Cj-0zD"/>
+                                    <segue destination="KYb-Qu-NC4" kind="presentation" id="c5q-Rt-NSR"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="notes" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9S-Nf-lJ1">
@@ -185,6 +183,16 @@
                                     <action selector="onLibraryButtonTapped:" destination="78w-QP-yJY" eventType="touchUpInside" id="oXe-wO-ZZe"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-Sc-crc">
+                                <rect key="frame" x="139" y="135" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="word" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OhM-BX-asy">
+                                <rect key="frame" x="139" y="135" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -193,13 +201,13 @@
                     <connections>
                         <outlet property="vocabImageView" destination="wXT-G1-O67" id="BBw-Gs-36n"/>
                         <outlet property="vocabWordDeffinitionTextField" destination="73A-tK-mJ4" id="G3I-1m-UJT"/>
-                        <outlet property="vocabWordLabel" destination="uf0-bp-MYF" id="AfN-be-RLi"/>
                         <outlet property="vocabWordNotesTextField" destination="H9S-Nf-lJ1" id="T9d-eg-pUZ"/>
+                        <outlet property="vocabWordTextField" destination="OhM-BX-asy" id="A8B-6I-2pJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0L-Vt-AVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800.5" y="289.5"/>
+            <point key="canvasLocation" x="3292.5" y="288.5"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="Zds-TL-CgY">
@@ -210,7 +218,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2ja-Qt-vJI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kUa-Fw-WLj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-V7-qg1">
@@ -220,13 +228,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4d1-Q9-36T"/>
                     <connections>
                         <outlet property="vocabDeffinitionWedView" destination="ObX-V7-qg1" id="xlJ-Gr-eWG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNE-1C-69g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3640.5" y="283.5"/>
+            <point key="canvasLocation" x="4203.5" y="283.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fjn-nY-zJN">
@@ -266,8 +275,48 @@
             </objects>
             <point key="canvasLocation" x="1654.5" y="283.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8j7-Nh-f2M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E6A-G4-ajW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EQR-Yf-emd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="78w-QP-yJY" kind="relationship" relationship="rootViewController" id="Fqi-iT-bRn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROn-IC-H8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800" y="289"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QRV-Px-gy6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xbG-zx-kvN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ada-2i-Qmi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KYb-Qu-NC4" kind="relationship" relationship="rootViewController" id="f1z-6t-Tir"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F99-rT-6AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3742.5" y="283.5"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="hqr-D0-eIR"/>
+        <segue reference="Fqi-iT-bRn"/>
+        <segue reference="c5q-Rt-NSR"/>
     </inferredMetricsTieBreakers>
 </document>
