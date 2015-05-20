@@ -10,7 +10,8 @@ import UIKit
 
 class VocabDetailViewController: UIViewController {
 
-    @IBOutlet weak var vocabWordLabel: UILabel!
+   
+    @IBOutlet weak var vocabWordTextField: UITextField!
     @IBOutlet weak var vocabWordDeffinitionTextField: UITextField!
     @IBOutlet weak var vocabWordNotesTextField: UITextField!
     @IBOutlet weak var vocabImageView: UIImageView!
