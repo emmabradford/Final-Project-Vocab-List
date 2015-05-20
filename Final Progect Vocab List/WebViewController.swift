@@ -22,6 +22,8 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func doneOnTappedButton(sender: AnyObject) {
+    }
 
     
 

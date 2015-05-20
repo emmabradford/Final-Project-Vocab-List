@@ -196,7 +196,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RhL-Ob-Sdn"/>
+                    <navigationItem key="navigationItem" id="RhL-Ob-Sdn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2D8-30-n23"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="vocabImageView" destination="wXT-G1-O67" id="BBw-Gs-36n"/>
@@ -228,14 +230,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4d1-Q9-36T"/>
+                    <navigationItem key="navigationItem" id="4d1-Q9-36T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="r86-2w-edR">
+                            <connections>
+                                <action selector="doneOnTappedButton:" destination="KYb-Qu-NC4" id="eaL-xQ-h6Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="vocabDeffinitionWedView" destination="ObX-V7-qg1" id="xlJ-Gr-eWG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNE-1C-69g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4203.5" y="283.5"/>
+            <point key="canvasLocation" x="4256.5" y="283.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fjn-nY-zJN">
@@ -317,6 +325,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="hqr-D0-eIR"/>
         <segue reference="Fqi-iT-bRn"/>
-        <segue reference="c5q-Rt-NSR"/>
+        <segue reference="f1z-6t-Tir"/>
     </inferredMetricsTieBreakers>
 </document>
