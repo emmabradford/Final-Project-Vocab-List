@@ -88,7 +88,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="78w-QP-yJY" kind="presentation" id="or1-HP-y2S"/>
+                                            <segue destination="E6A-G4-ajW" kind="presentation" id="Wwp-s5-trZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -262,7 +262,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVm-zc-a9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="284"/>
+            <point key="canvasLocation" x="333.5" y="283.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tjv-Y2-MkI">
@@ -281,7 +281,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MJ-jq-hpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654.5" y="283.5"/>
+            <point key="canvasLocation" x="1518.5" y="752.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8j7-Nh-f2M">
@@ -300,7 +300,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROn-IC-H8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800" y="289"/>
+            <point key="canvasLocation" x="2699.5" y="283.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QRV-Px-gy6">
@@ -323,8 +323,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hqr-D0-eIR"/>
-        <segue reference="Fqi-iT-bRn"/>
-        <segue reference="f1z-6t-Tir"/>
+        <segue reference="b0R-4O-Uhb"/>
+        <segue reference="c5q-Rt-NSR"/>
     </inferredMetricsTieBreakers>
 </document>

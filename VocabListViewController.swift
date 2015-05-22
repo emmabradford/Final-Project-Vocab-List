@@ -73,7 +73,8 @@ class VocabListViewController: UIViewController, UITableViewDataSource, UITableV
         vocabWords.insert(vocabList, atIndex: destinationIndexPath.row)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var vdvc = segue.destinationViewController as! VocabDetailViewController
+        let nvc = segue.destinationViewController as! UINavigationController
+        var vdvc = nvc.topViewController as! VocabDetailViewController
         var index = vocabTableView.indexPathsForSelectedRows()
         //vdvc.vocabWordLabel = vocabTextField.text
         
