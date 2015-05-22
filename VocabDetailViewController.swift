@@ -48,4 +48,8 @@ class VocabDetailViewController: UIViewController {
             self.vocabImageView.image = selectedImage
         })
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let wvc = segue.destinationViewController as! WebViewController
+        wvc.website = "http://dictionary.reference.com/browse/" + vocabWordTextField.text
+    }
 }
