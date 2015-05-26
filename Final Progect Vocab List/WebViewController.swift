@@ -23,6 +23,7 @@ class WebViewController: UIViewController {
 
     }
     @IBAction func doneOnTappedButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
     

@@ -64,19 +64,21 @@ class VocabListViewController: UIViewController, UITableViewDataSource, UITableV
             vocabTableView.reloadData()
         }
     }
+    
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
+    
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         var vocabList = vocabWords[sourceIndexPath.row]
         vocabWords.removeAtIndex(sourceIndexPath.row)
         vocabWords.insert(vocabList, atIndex: destinationIndexPath.row)
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nvc = segue.destinationViewController as! UINavigationController
         var vdvc = nvc.topViewController as! VocabDetailViewController
         var index = vocabTableView.indexPathsForSelectedRows()
-        //vdvc.vocabWordLabel = vocabTextField.text
         
     }
 }

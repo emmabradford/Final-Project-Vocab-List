@@ -157,7 +157,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onWedsiteTappedButton:" destination="78w-QP-yJY" eventType="touchUpInside" id="xdv-Cj-0zD"/>
-                                    <segue destination="KYb-Qu-NC4" kind="presentation" id="c5q-Rt-NSR"/>
+                                    <segue destination="xbG-zx-kvN" kind="presentation" id="FDe-YR-jfv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="notes" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9S-Nf-lJ1">
@@ -197,7 +197,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="RhL-Ob-Sdn">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2D8-30-n23"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="2D8-30-n23">
+                            <connections>
+                                <action selector="onDoneButtonTapped:" destination="78w-QP-yJY" id="CdS-WJ-GPS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -281,7 +285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2MJ-jq-hpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1518.5" y="752.5"/>
+            <point key="canvasLocation" x="1499.5" y="283.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8j7-Nh-f2M">
@@ -319,11 +323,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F99-rT-6AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3742.5" y="283.5"/>
+            <point key="canvasLocation" x="3718.5" y="283.5"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="b0R-4O-Uhb"/>
-        <segue reference="c5q-Rt-NSR"/>
     </inferredMetricsTieBreakers>
 </document>
