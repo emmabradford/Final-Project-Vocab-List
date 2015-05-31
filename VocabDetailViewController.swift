@@ -8,9 +8,9 @@
 
 import UIKit
 
-class VocabDetailViewController: UIViewController {
-
-   
+class VocabDetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+    
     @IBOutlet weak var vocabWordTextField: UITextField!
     @IBOutlet weak var vocabWordDeffinitionTextField: UITextField!
     @IBOutlet weak var vocabWordNotesTextField: UITextField!
@@ -23,10 +23,11 @@ class VocabDetailViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         vocabImageView.image = image
         vocabWordDeffinitionTextField.text = wordDefinition
         vocabWordNotesTextField.text = notes
-        super.viewDidLoad()
+        imagePicker.delegate = self
     }
     @IBAction func onWedsiteTappedButton(sender: UIButton) {
     }
@@ -34,17 +35,15 @@ class VocabDetailViewController: UIViewController {
         image = vocabImageView.image
         wordDefinition = vocabWordDeffinitionTextField.text
         notes = vocabWordNotesTextField.text
-        
     }
     @IBAction func onLibraryButtonTapped(sender: UIButton) {
         imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
-        vocabImageView.image = self.image
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         imagePicker.dismissViewControllerAnimated(true, completion: {
-            var selectedImage = info [UIImagePickerControllerOriginalImage] as! UIImage
+            var selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
             self.vocabImageView.image = selectedImage
         })
     }
